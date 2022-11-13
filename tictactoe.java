@@ -20,7 +20,6 @@ public class tictactoe {
 			
 			System.out.println("Turno del jugador " + ((contador % 2) + 1) + ".");
 			
-			
 			do {
 				
 				do {

@@ -1,2 +1,2 @@
 # tictactoe
-TIC TAC TOE 2 JUGADORES JAVA
+Tic Tac Toe 2 Jugadores JAVA

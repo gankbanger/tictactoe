@@ -25,38 +25,38 @@ public class tictactoe {
 			if(contador % 2 == 0) System.out.println("Turno del jugador 1.");
 			if(contador % 2 == 1) System.out.println("Turno del jugador 2.");
 			
-			System.out.println("Dime la fila:"); // PREGUNTAMOS POR LA FILA
+			System.out.println("Dime la fila:");
 			fila = teclado.nextInt();
 			
-			while(fila < 1 || fila > 3) { // SI LA FILA ES MENOR A 1 O MAYOR A 3 VOLVEREMOS A PREGUNTAR LA FILA
+			while(fila < 1 || fila > 3) {
 				System.out.println("Introduzca una fila del 1 al 3!");
 			}
 			
 			
-			System.out.println("Dime la columna:"); // PREGUNTAMOS POR LA COLUMNA
+			System.out.println("Dime la columna:");
 			columna = teclado.nextInt();
 			
 			
-			while(columna < 1 || columna > 3) { // SI LA COLUMNA ES MENOR A 1 O MAYOR A 3 VOLVEREMOS A PREGUNTAR LA COLUMNA
+			while(columna < 1 || columna > 3) {
 				System.out.println("Introduzca una fila del 1 al 3!");
 			}
 			
-			while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2) { // SI LA CASILLA YA HA SIDO MARCADA PEDIRA QUE MARQUE OTRA CASILLA
+			while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2) {
 				
 				System.out.println("La casilla ha sido marcada!\nMarque otra casilla.\n");
 				
-				System.out.println("Dime la fila:"); // PREGUNTAMOS POR LA FILA
+				System.out.println("Dime la fila:");
 				fila = teclado.nextInt();
 				
-				while(fila < 1 || fila > 3) { // SI LA FILA ES MENOR A 1 O MAYOR A 3 VOLVEREMOS A PREGUNTAR LA FILA
+				while(fila < 1 || fila > 3) {
 					System.out.println("Introduzca una fila del 1 al 3!");
 				}
 				
 				
-				System.out.println("Dime la columna:"); // PREGUNTAMOS POR LA COLUMNA
+				System.out.println("Dime la columna:");
 				columna = teclado.nextInt();
 				
-				while(columna < 1 || columna > 3) { // SI LA COLUMNA ES MENOR A 1 O MAYOR A 3 VOLVEREMOS A PREGUNTAR LA COLUMNA
+				while(columna < 1 || columna > 3) {
 					System.out.println("Introduzca una fila del 1 al 3!");
 				}
 				
@@ -65,15 +65,15 @@ public class tictactoe {
 			if(contador % 2 == 0) casilla[fila-1][columna-1] = 1;
 			if(contador % 2 == 1) casilla[fila-1][columna-1] = 2;
 			
-			System.out.print("\n\t---\t---\t---\n\t|1|\t|2|\t|3|\n\t---\t---\t---\n\n"); // PRINTAMOS LAS COLUMNAS
+			System.out.print("\n\t---\t---\t---\n\t|1|\t|2|\t|3|\n\t---\t---\t---\n\n");
 			
 			for(int i = 0; i < 3; i++) {
 				
-				System.out.print("---\n|" + (i+1) + "|"); // PRINTAMOS LAS FILAS
+				System.out.print("---\n|" + (i+1) + "|");
 				
 				for(int j = 0; j < 3; j++) {
 					
-					System.out.print("\t " + casilla[i][j]); // PRINTAMOS LAS CASILLAS
+					System.out.print("\t " + casilla[i][j]);
 					
 				}
 				

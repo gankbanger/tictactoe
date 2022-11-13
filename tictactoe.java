@@ -19,8 +19,7 @@ public class tictactoe {
 		
 		do {
 			
-			if(contador % 2 == 0) System.out.println("Turno del jugador 1.");
-			if(contador % 2 == 1) System.out.println("Turno del jugador 2.");
+			System.out.println("Turno del jugador " + ((contador % 2) + 1) + ".");
 			
 			System.out.println("Dime la fila:");
 			fila = teclado.nextInt();
@@ -67,8 +66,7 @@ public class tictactoe {
 				
 			}
 			
-			if(contador % 2 == 0) casilla[fila-1][columna-1] = 1;
-			if(contador % 2 == 1) casilla[fila-1][columna-1] = 2;
+			casilla[fila-1][columna-1] = ((contador % 2) + 1);
 			
 			System.out.print("\n\t---\t---\t---\n\t|1|\t|2|\t|3|\n\t---\t---\t---\n\n");
 			

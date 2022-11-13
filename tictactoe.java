@@ -38,10 +38,9 @@ public class tictactoe {
 					
 				}while(columna < 1 || columna > 3);
 				
-				if(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2)
-					System.out.println("La casilla ha sido marcada!\nMarque otra casilla.\n");
+				if(casilla[fila-1][columna-1] != 0) System.out.println("La casilla ha sido marcada!\nMarque otra casilla.\n");
 				
-			}while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2);
+			}while(casilla[fila-1][columna-1] != 0);
 			
 			casilla[fila-1][columna-1] = ((contador % 2) + 1);
 			

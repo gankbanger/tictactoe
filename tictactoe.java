@@ -113,6 +113,15 @@ public class tictactoe {
 				System.out.println("El jugador 2 ha ganado");
 				fin = true;
 			}
+			
+			else if(
+			casilla[0][0] != 0 && casilla[0][1] != 0 && casilla[0][2] != 0 &&
+			casilla[1][0] != 0 && casilla[1][1] != 0 && casilla[1][2] != 0 &&
+			casilla[2][0] != 0 && casilla[2][1] != 0 && casilla[2][2] != 0
+			) {
+				System.out.println("Empate!");
+				fin = true;
+			}
 
 			contador++;
 			

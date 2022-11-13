@@ -7,15 +7,12 @@ public class tictactoe {
 		Scanner teclado = new Scanner(System.in);
 		
 		
-		int [][] casilla = new int [3][3];
-		
+		int [][] casilla = new int [3][3]; // TABLERO
 		int fila, columna;
 		
-		int contador = 0;
-		
-		boolean jugador1 = false;
-		
-		boolean jugador2 = false;
+		int contador = 0; // TURNO JUGADOR
+		boolean jugador1 = false; // VICTORIA JUGADOR 1
+		boolean jugador2 = false; // VICTORIA JUGADOR 2
 		
 		
 		System.out.println("◝(ᵔᵕᵔ)◜ ¡TIC TAC TOE! ◝(ᵔᵕᵔ)◜\n");

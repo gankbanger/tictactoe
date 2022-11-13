@@ -30,6 +30,8 @@ public class tictactoe {
 			
 			while(fila < 1 || fila > 3) {
 				System.out.println("Introduzca una fila del 1 al 3!");
+				System.out.println("Dime la fila:");
+				fila = teclado.nextInt();
 			}
 			
 			
@@ -39,6 +41,8 @@ public class tictactoe {
 			
 			while(columna < 1 || columna > 3) {
 				System.out.println("Introduzca una fila del 1 al 3!");
+				System.out.println("Dime la columna:");
+				columna = teclado.nextInt();
 			}
 			
 			while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2) {

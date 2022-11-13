@@ -69,7 +69,7 @@ public class tictactoe {
 				fin = true;
 			}
 			
-			if(contador == 8) {
+			else if(contador == 8) {
 				System.out.println("Empate!");
 				fin = true;
 			}

@@ -24,17 +24,15 @@ public class tictactoe {
 				
 				do {
 					
-					System.out.println("Dime la fila:");
+					System.out.println("Dime la fila (del 1 al 3):");
 					fila = teclado.nextInt();
-					if(fila < 1 || fila > 3) System.out.println("Introduzca una fila del 1 al 3!");
 					
 				}while(fila < 1 || fila > 3);
 				
 				do {
 					
-					System.out.println("Dime la columna:");
+					System.out.println("Dime la columna (del 1 al 3):");
 					columna = teclado.nextInt();
-					if(columna < 1 || columna > 3) System.out.println("Introduzca una columna del 1 al 3!");
 					
 				}while(columna < 1 || columna > 3);
 				

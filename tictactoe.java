@@ -58,34 +58,18 @@ public class tictactoe {
 				
 			}
 			
-			fila = 0;
-			columna = 0;
-			
-			if( // VICTORIA JUGADOR 1
-			(casilla[0][0] == 1 && casilla[0][1] == 1 && casilla[0][2] == 1) ||
-			(casilla[1][0] == 1 && casilla[1][1] == 1 && casilla[1][2] == 1) ||
-			(casilla[2][0] == 1 && casilla[2][1] == 1 && casilla[2][2] == 1) ||
-			(casilla[0][0] == 1 && casilla[1][0] == 1 && casilla[2][0] == 1) ||
-			(casilla[0][1] == 1 && casilla[1][1] == 1 && casilla[2][1] == 1) ||
-			(casilla[0][2] == 1 && casilla[1][2] == 1 && casilla[2][2] == 1) ||
-			(casilla[0][0] == 1 && casilla[1][1] == 1 && casilla[2][2] == 1) ||
-			(casilla[0][2] == 1 && casilla[1][1] == 1 && casilla[2][0] == 1)
+			int jug = ((contador % 2)+1);
+			if( // VICTORIA JUGADOR
+			(casilla[0][0] == jug && casilla[0][1] == jug && casilla[0][2] == jug) ||
+			(casilla[1][0] == jug && casilla[1][1] == jug && casilla[1][2] == jug) ||
+			(casilla[2][0] == jug && casilla[2][1] == jug && casilla[2][2] == jug) ||
+			(casilla[0][0] == jug && casilla[1][0] == jug && casilla[2][0] == jug) ||
+			(casilla[0][1] == jug && casilla[1][1] == jug && casilla[2][1] == jug) ||
+			(casilla[0][2] == jug && casilla[1][2] == jug && casilla[2][2] == jug) ||
+			(casilla[0][0] == jug && casilla[1][1] == jug && casilla[2][2] == jug) ||
+			(casilla[0][2] == jug && casilla[1][1] == jug && casilla[2][0] == jug)
 			) {
-				System.out.println("El jugador 1 ha ganado");
-				fin = true;
-			}
-			
-			if( // VICTORIA JUGADOR 2
-			(casilla[0][0] == 2 && casilla[0][1] == 2 && casilla[0][2] == 2) ||
-			(casilla[1][0] == 2 && casilla[1][1] == 2 && casilla[1][2] == 2) ||
-			(casilla[2][0] == 2 && casilla[2][1] == 2 && casilla[2][2] == 2) ||
-			(casilla[0][0] == 2 && casilla[1][0] == 2 && casilla[2][0] == 2) ||
-			(casilla[0][1] == 2 && casilla[1][1] == 2 && casilla[2][1] == 2) ||
-			(casilla[0][2] == 2 && casilla[1][2] == 2 && casilla[2][2] == 2) ||
-			(casilla[0][0] == 2 && casilla[1][1] == 2 && casilla[2][2] == 2) ||
-			(casilla[0][2] == 2 && casilla[1][1] == 2 && casilla[2][0] == 2)
-			) {
-				System.out.println("El jugador 2 ha ganado");
+				System.out.println("El jugador " + jug + " ha ganado");
 				fin = true;
 			}
 			

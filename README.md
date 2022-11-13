@@ -1,2 +1,1 @@
-# tic-tac-toe-2-jugadores
-Tic-Tac-Toe Java 2 Jugadores
+# JAVA TIC TAC TOE 2 JUGADORES

@@ -85,7 +85,7 @@ public class tictactoe {
 			fila = 0;
 			columna = 0;
 			
-			if(
+			if( // VICTORIA JUGADOR 1
 			(casilla[0][0] == 1 && casilla[0][1] == 1 && casilla[0][2] == 1) ||
 			(casilla[1][0] == 1 && casilla[1][1] == 1 && casilla[1][2] == 1) ||
 			(casilla[2][0] == 1 && casilla[2][1] == 1 && casilla[2][2] == 1) ||
@@ -99,7 +99,7 @@ public class tictactoe {
 				jugador1 = true;
 			}
 			
-			if(
+			if( // VICTORIA JUGADOR 2
 			(casilla[0][0] == 2 && casilla[0][1] == 2 && casilla[0][2] == 2) ||
 			(casilla[1][0] == 2 && casilla[1][1] == 2 && casilla[1][2] == 2) ||
 			(casilla[2][0] == 2 && casilla[2][1] == 2 && casilla[2][2] == 2) ||

@@ -41,6 +41,7 @@ public class tictactoe {
 				columna = teclado.nextInt();
 			}
 			
+			
 			while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2) {
 				
 				System.out.println("La casilla ha sido marcada!\nMarque otra casilla.\n");

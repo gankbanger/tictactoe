@@ -20,50 +20,29 @@ public class tictactoe {
 			
 			System.out.println("Turno del jugador " + ((contador % 2) + 1) + ".");
 			
-			System.out.println("Dime la fila:");
-			fila = teclado.nextInt();
 			
-			while(fila < 1 || fila > 3) {
-				System.out.println("Introduzca una fila del 1 al 3!");
-				System.out.println("Dime la fila:");
-				fila = teclado.nextInt();
-			}
-			
-			
-			System.out.println("Dime la columna:");
-			columna = teclado.nextInt();
-			
-			while(columna < 1 || columna > 3) {
-				System.out.println("Introduzca una columna del 1 al 3!");
-				System.out.println("Dime la columna:");
-				columna = teclado.nextInt();
-			}
-			
-			
-			while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2) {
+			do {
 				
-				System.out.println("La casilla ha sido marcada!\nMarque otra casilla.\n");
-				
-				System.out.println("Dime la fila:");
-				fila = teclado.nextInt();
-				
-				while(fila < 1 || fila > 3) {
-					System.out.println("Introduzca una fila del 1 al 3!");
+				do {
+					
 					System.out.println("Dime la fila:");
 					fila = teclado.nextInt();
-				}
+					if(fila < 1 || fila > 3) System.out.println("Introduzca una fila del 1 al 3!");
+					
+				}while(fila < 1 || fila > 3);
 				
-				
-				System.out.println("Dime la columna:");
-				columna = teclado.nextInt();
-				
-				while(columna < 1 || columna > 3) {
-					System.out.println("Introduzca una columna del 1 al 3!");
+				do {
+					
 					System.out.println("Dime la columna:");
 					columna = teclado.nextInt();
-				}
+					if(columna < 1 || columna > 3) System.out.println("Introduzca una columna del 1 al 3!");
+					
+				}while(columna < 1 || columna > 3);
 				
-			}
+				if(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2)
+					System.out.println("La casilla ha sido marcada!\nMarque otra casilla.\n");
+				
+			}while(casilla[fila-1][columna-1] == 1 || casilla[fila-1][columna-1] == 2);
 			
 			casilla[fila-1][columna-1] = ((contador % 2) + 1);
 			

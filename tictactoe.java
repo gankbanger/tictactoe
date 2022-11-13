@@ -125,5 +125,4 @@ public class tictactoe {
 		
 		teclado.close();
 	}
-
 }

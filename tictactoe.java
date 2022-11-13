@@ -123,9 +123,7 @@ public class tictactoe {
 		
 		System.out.println("\nFIN DEL PROGRAMA! ◝(ᵔᵕᵔ)◜");
 		
-		
 		teclado.close();
-		
 	}
 
 }

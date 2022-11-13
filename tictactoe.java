@@ -60,12 +60,8 @@ public class tictactoe {
 			
 			int jug = ((contador % 2)+1);
 			if( // VICTORIA JUGADOR
-			(casilla[0][0] == jug && casilla[0][1] == jug && casilla[0][2] == jug) ||
-			(casilla[1][0] == jug && casilla[1][1] == jug && casilla[1][2] == jug) ||
-			(casilla[2][0] == jug && casilla[2][1] == jug && casilla[2][2] == jug) ||
-			(casilla[0][0] == jug && casilla[1][0] == jug && casilla[2][0] == jug) ||
-			(casilla[0][1] == jug && casilla[1][1] == jug && casilla[2][1] == jug) ||
-			(casilla[0][2] == jug && casilla[1][2] == jug && casilla[2][2] == jug) ||
+			(casilla[fila-1][0] == jug && casilla[fila-1][1] == jug && casilla[fila-1][2] == jug) ||
+			(casilla[0][columna-1] == jug && casilla[1][columna-1] == jug && casilla[2][columna-1] == jug) ||
 			(casilla[0][0] == jug && casilla[1][1] == jug && casilla[2][2] == jug) ||
 			(casilla[0][2] == jug && casilla[1][1] == jug && casilla[2][0] == jug)
 			) {

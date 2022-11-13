@@ -11,8 +11,7 @@ public class tictactoe {
 		int fila, columna;
 		
 		int contador = 0; // TURNO JUGADOR
-		boolean victoria = false; // VICTORIA
-		boolean empate = false; // EMPATE
+		boolean fin = false; // FIN
 		
 		
 		System.out.println("◝(ᵔᵕᵔ)◜ ¡TIC TAC TOE! ◝(ᵔᵕᵔ)◜\n");
@@ -98,7 +97,7 @@ public class tictactoe {
 			(casilla[0][2] == 1 && casilla[1][1] == 1 && casilla[2][0] == 1)
 			) {
 				System.out.println("El jugador 1 ha ganado");
-				victoria = true;
+				fin = true;
 			}
 			
 			if( // VICTORIA JUGADOR 2
@@ -112,22 +111,22 @@ public class tictactoe {
 			(casilla[0][2] == 2 && casilla[1][1] == 2 && casilla[2][0] == 2)
 			) {
 				System.out.println("El jugador 2 ha ganado");
-				victoria = true;
+				fin = true;
 			}
 			
 			if( // EMPATE
 			casilla[0][0] != 0 && casilla[0][1] != 0 && casilla[0][2] != 0 &&
 			casilla[1][0] != 0 && casilla[1][1] != 0 && casilla[1][2] != 0 &&
 			casilla[2][0] != 0 && casilla[2][1] != 0 && casilla[2][2] != 0 &&
-			victoria != true
+			fin != true
 			) {
 				System.out.println("Empate!");
-				empate = true;
+				fin = true;
 			}
 
 			contador++;
 			
-		}while(victoria != true && empate != true);
+		}while(fin != true);
 		
 		System.out.println("\nFIN DEL PROGRAMA! ◝(ᵔᵕᵔ)◜");
 		

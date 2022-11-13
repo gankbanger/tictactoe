@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class tictactoe {
 
-	private int[][] tablero = new int[3][3]; // TABLERO
+	private int[][] casillas = new int[3][3]; // TABLERO
 	private int numeroTurno = 0; // TURNO JUGADOR
-	private int turnoDe = 0;
+	private int jug = 0;
 	private Scanner teclado = null;
+	private int fila = 0;
+	private int columna = 0;
 
 	public static void main(String[] args) {
 		tictactoe juego = new tictactoe();
@@ -29,13 +31,11 @@ public class tictactoe {
 	}
 
 	private void determinarSiguienteTurno() {
-		turnoDe = (numeroTurno++ % 2) + 1;
-		System.out.println("Turno del jugador " + turnoDe + ".");
+		jug = (numeroTurno++ % 2) + 1;
+		System.out.println("Turno del jugador " + jug + ".");
 	}
 
 	private void jugarTurno() {
-		int columna;
-		int fila;
 
 		while (true) {
 			do {
@@ -48,8 +48,8 @@ public class tictactoe {
 				columna = teclado.nextInt();
 			} while (columna < 1 || columna > 3);
 
-			if (tablero[fila - 1][columna - 1] == 0) {
-				tablero[fila - 1][columna - 1] = turnoDe;
+			if (casillas[fila - 1][columna - 1] == 0) {
+				casillas[fila - 1][columna - 1] = jug;
 				return;
 			}
 			System.out.println("La posicion ya está ocupada");
@@ -63,31 +63,26 @@ public class tictactoe {
 		for (int i = 0; i < 3; i++) {
 			System.out.print("---\n|" + (i + 1) + "|");
 			for (int j = 0; j < 3; j++) {
-				System.out.print("\t " + tablero[i][j]);
+				System.out.print("\t " + casillas[i][j]);
 			}
 			System.out.println("\n---\n");
 		}
 	}
 
-
 	private boolean verificarSiHayGanador() {
 
-		if ((tablero[0][0] == turnoDe && tablero[0][1] == turnoDe && tablero[0][2] == turnoDe) ||
-				(tablero[1][0] == turnoDe && tablero[1][1] == turnoDe && tablero[1][2] == turnoDe) ||
-				(tablero[2][0] == turnoDe && tablero[2][1] == turnoDe && tablero[2][2] == turnoDe) ||
-				(tablero[0][0] == turnoDe && tablero[1][0] == turnoDe && tablero[2][0] == turnoDe) ||
-				(tablero[0][1] == turnoDe && tablero[1][1] == turnoDe && tablero[2][1] == turnoDe) ||
-				(tablero[0][2] == turnoDe && tablero[1][2] == turnoDe && tablero[2][2] == turnoDe) ||
-				(tablero[0][0] == turnoDe && tablero[1][1] == turnoDe && tablero[2][2] == turnoDe) ||
-				(tablero[0][2] == turnoDe && tablero[1][1] == turnoDe && tablero[2][0] == turnoDe)) {
-			System.out.println("El jugador " + turnoDe + " ha ganado");
+		if ((casillas[fila - 1][0] == jug && casillas[fila - 1][1] == jug && casillas[fila - 1][2] == jug) ||
+				(casillas[0][columna - 1] == jug && casillas[1][columna - 1] == jug && casillas[2][columna - 1] == jug) ||
+				(casillas[0][0] == jug && casillas[1][1] == jug && casillas[2][2] == jug) ||
+				(casillas[0][2] == jug && casillas[1][1] == jug && casillas[2][0] == jug)) {
+			System.out.println("El jugador " + jug + " ha ganado");
 			return true;
 		}
 
 		// Empate
-		if (tablero[0][0] != 0 && tablero[0][1] != 0 && tablero[0][2] != 0 &&
-				tablero[1][0] != 0 && tablero[1][1] != 0 && tablero[1][2] != 0 &&
-				tablero[2][0] != 0 && tablero[2][1] != 0 && tablero[2][2] != 0) {
+		if (casillas[0][0] != 0 && casillas[0][1] != 0 && casillas[0][2] != 0 &&
+				casillas[1][0] != 0 && casillas[1][1] != 0 && casillas[1][2] != 0 &&
+				casillas[2][0] != 0 && casillas[2][1] != 0 && casillas[2][2] != 0) {
 			System.out.println("Empate!");
 			return true;
 		}
